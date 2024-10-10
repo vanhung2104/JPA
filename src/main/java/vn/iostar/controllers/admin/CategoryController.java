@@ -44,7 +44,7 @@ public class CategoryController extends HttpServlet {
 			int id = Integer.parseInt(req.getParameter("id"));
 			Category category = cateService.findById(id);			
 			req.setAttribute("cate", category);
-			req.getRequestDispatcher("/views/admin/category-edit1.jsp").forward(req, resp);	
+			req.getRequestDispatcher("/views/admin/category-edit.jsp").forward(req, resp);
 		}	
 		  else if(url.contains("delete"))
 		  { int id = Integer.parseInt(req.getParameter("id"));
@@ -104,7 +104,7 @@ public class CategoryController extends HttpServlet {
 			cateService.insert(category);
 			resp.sendRedirect(req.getContextPath() + "/admin/categories");
 		}
-		else if (url.contains("update")) {
+		else if (url.contains("edit")) {
 			
 			int categoryid = Integer.parseInt(req.getParameter("categoryid"));
 			String categoryname = req.getParameter("categoryname");
