@@ -13,6 +13,6 @@ public interface IVideoDao {
     Video findById(int videoid);
     void insert(Video video);
     void update(Video video);
-    void delete(int videoid) throws Exception;
+    void delete(String videoid) throws Exception;
 
 }

@@ -107,7 +107,7 @@ public class VideoDaoImpl implements IVideoDao {
     }
 
     @Override
-    public void delete(int videoid) throws Exception {
+    public void delete(String videoid) throws Exception {
         // TODO Auto-generated method stub
         EntityManager enma = JPAConfig.getEntityManager();
         EntityTransaction trans = enma.getTransaction();

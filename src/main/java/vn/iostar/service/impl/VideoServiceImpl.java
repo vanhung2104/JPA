@@ -48,7 +48,7 @@ public class VideoServiceImpl implements IVideoService {
     }
 
     @Override
-    public void delete(int videoid) throws Exception {
+    public void delete(String videoid) throws Exception {
         videoDao.delete(videoid);
     }
 
